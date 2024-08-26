@@ -149,10 +149,10 @@ This repository includes a demo Android application that demonstrates how to use
 # DemoDatabase: The Room database class that provides access to the DAO.
 
 ## Running the Demo App
-# Clone the repository.
-# Open the project in Android Studio.
-# Build and run the app on an emulator or physical device.
-# Use the provided buttons to perform operations and observe the results.
+Clone the repository.
+Open the project in Android Studio.
+Build and run the app on an emulator or physical device.
+Use the provided buttons to perform operations and observe the results.
 
 # video
 
