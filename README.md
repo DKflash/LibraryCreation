@@ -143,10 +143,10 @@ for (DemoEntity entity : results) {
 This repository includes a demo Android application that demonstrates how to use the library in a real-world scenario. The demo app allows you to perform CRUD operations on DemoEntity instances and shows the results in a TextView.
 
 ### Demo App Structure
-# MainActivity: Demonstrates how to use the library for inserting, querying, updating, and deleting data.
-# DemoEntity: A Room entity representing a table in the database.
-# DemoDao: The DAO interface for interacting with DemoEntity.
-# DemoDatabase: The Room database class that provides access to the DAO.
+MainActivity: Demonstrates how to use the library for inserting, querying, updating, and deleting data.
+DemoEntity: A Room entity representing a table in the database.
+DemoDao: The DAO interface for interacting with DemoEntity.
+DemoDatabase: The Room database class that provides access to the DAO.
 
 ## Running the Demo App
 Clone the repository.
