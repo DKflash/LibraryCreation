@@ -98,12 +98,12 @@ public abstract class DemoDatabase extends RoomDatabase {
 
 #### Insert an Entity and Retrieve the Generated ID
 ```java
-DemoEntity demoEntity = new DemoEntity("John Doe", 25);
+DemoEntity demoEntity = new DemoEntity("Adam Agbaria", 22);
 long generatedId = EntityUtils.insertAndReturnId(demoDao, demoEntity);
 Update an Entity
 ```java
 
-DemoEntity updatedEntity = new DemoEntity("John Doe", 30);
+DemoEntity updatedEntity = new DemoEntity("Adam Agbaria", 24);
 updatedEntity.setId(generatedId);
 EntityUtils.updateAsync(demoDao, updatedEntity);
 ```
@@ -111,7 +111,7 @@ EntityUtils.updateAsync(demoDao, updatedEntity);
 ---
 ### Delete an Entity
 ```java
-DemoEntity deleteEntity = new DemoEntity("John Doe", 30);
+DemoEntity deleteEntity = new DemoEntity("Adam Agbaria", 24);
 deleteEntity.setId(generatedId);
 EntityUtils.deleteAsync(demoDao, deleteEntity);
 Retrieve All Entities
