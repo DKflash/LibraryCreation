@@ -57,6 +57,9 @@ public class DemoEntity {
 
     // Getters and Setters...
 }
+```
+
+---
 
 #### 2. Create a DAO Interface
 ```java
@@ -72,6 +75,9 @@ public interface DemoDao extends DaoInterface<DemoEntity> {
     @Query("SELECT * FROM demo_table")
     LiveData<List<DemoEntity>> getAll();
 }
+```
+
+---
 
 #### 3. Create the Room Database
 ```java
@@ -82,6 +88,9 @@ import androidx.room.RoomDatabase;
 public abstract class DemoDatabase extends RoomDatabase {
     public abstract DemoDao demoDao();
 }
+```
+
+---
 
 ### CRUD Operations
 
@@ -90,41 +99,29 @@ public abstract class DemoDatabase extends RoomDatabase {
 DemoEntity demoEntity = new DemoEntity("John Doe", 25);
 long generatedId = EntityUtils.insertAndReturnId(demoDao, demoEntity);
 Update an Entity
-java
+```java
 
-Verify
-
-Open In Editor
-Edit
-Copy code
 DemoEntity updatedEntity = new DemoEntity("John Doe", 30);
 updatedEntity.setId(generatedId);
 EntityUtils.updateAsync(demoDao, updatedEntity);
-Delete an Entity
-java
+```
 
-Verify
-
-Open In Editor
-Edit
-Copy code
+---
+### Delete an Entity
+```java
 DemoEntity deleteEntity = new DemoEntity("John Doe", 30);
 deleteEntity.setId(generatedId);
 EntityUtils.deleteAsync(demoDao, deleteEntity);
 Retrieve All Entities
-java
-
-Verify
-
-Open In Editor
-Edit
-Copy code
+```java
 EntityUtils.getAllEntities(demoDao).observe(this, demoEntities -> {
     for (DemoEntity entity : demoEntities) {
         System.out.println(entity.getName() + " - " + entity.getAge());
     }
 });
+```
 
+---
 ### Dynamic Queries
 
 #### Build and Execute a Query
@@ -133,4 +130,6 @@ QueryBuilder queryBuilder = new QueryBuilder("demo_table");
 queryBuilder.where("age > ?", 18).orderBy("age", true);
 
 List<DemoEntity> results = demoDao.executeQuery(queryBuilder.build());
-'''
+```
+
+---
