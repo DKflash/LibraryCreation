@@ -1,14 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    android:padding="16dp">
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
+        android:id="@+id/insertButton"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Add User"
-        android:layout_centerInParent="true"/>
-</RelativeLayout>
+        android:text="Insert Data" />
+
+    <Button
+        android:id="@+id/queryButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Query Data" />
+
+    <Button
+        android:id="@+id/updateButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Update Data" />
+
+    <Button
+        android:id="@+id/deleteButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Delete Data" />
+
+    <TextView
+        android:id="@+id/resultTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Results will be displayed here"
+        android:paddingTop="16dp"
+        android:textSize="16sp"
+        android:textColor="@android:color/black" />
+
+</LinearLayout>

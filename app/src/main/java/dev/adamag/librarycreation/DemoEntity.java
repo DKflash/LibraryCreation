@@ -1,18 +1,23 @@
 package dev.adamag.librarycreation;
 
-import dev.adamag.roomlibrary.BaseEntity;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
 
-public class User implements BaseEntity {
+@Entity(tableName = "demo_table")
+public class DemoEntity {
+
+    @PrimaryKey(autoGenerate = true)
     private int id;
     private String name;
     private int age;
 
-    public User(String name, int age) {
+    // Constructor
+    public DemoEntity(String name, int age) {
         this.name = name;
         this.age = age;
     }
 
-    @Override
+    // Getters and setters
     public int getId() {
         return id;
     }

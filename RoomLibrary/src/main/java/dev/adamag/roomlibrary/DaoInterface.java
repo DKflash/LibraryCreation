@@ -1,18 +1,16 @@
 package dev.adamag.roomlibrary;
 
-import androidx.room.Dao;
+import androidx.lifecycle.LiveData;
 import androidx.room.Delete;
 import androidx.room.Insert;
-import androidx.room.Query;
 import androidx.room.Update;
 
 import java.util.List;
 
+public interface DaoInterface<T> {
 
-@Dao
-public interface BaseDao<T extends BaseEntity> {
     @Insert
-    void insert(T entity);
+    long insert(T entity);
 
     @Update
     void update(T entity);
@@ -20,5 +18,5 @@ public interface BaseDao<T extends BaseEntity> {
     @Delete
     void delete(T entity);
 
-
+    LiveData<List<T>> getAll();
 }

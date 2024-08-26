@@ -39,6 +39,9 @@ dependencies {
     androidTestImplementation libs.espresso.core
 
     implementation project(":RoomLibrary")
+    implementation 'androidx.room:room-runtime:2.5.2' // Use the latest version available
+    annotationProcessor 'androidx.room:room-compiler:2.5.2' // For Java projects
+
 //    implementation "androidx.room:room-runtime:2.5.0"{
 //        exclude group: 'com.intellij', module: 'annotations'
 //    }
