@@ -8,7 +8,8 @@
 - **QueryBuilder**: Allows developers to create dynamic SQL queries.
 - **Generic Implementation**: Works with any Room entity and DAO.
 
-[Video](#video)
+
+[Demonstration Video](#video)
 
 ## Installation
 ### 1. Add the Library to Your Project
