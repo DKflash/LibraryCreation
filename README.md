@@ -1,27 +1,47 @@
-RoomSQL Query Simplification Library
-Overview
-The RoomSQL Query Simplification Library is designed to make working with Room in Android applications easier. It provides utility classes for performing common database operations such as CRUD (Create, Read, Update, Delete), dynamic query construction, and database initialization. This library reduces boilerplate code and streamlines the integration of Room in your Android projects.
+# RoomSQL Query Simplification Library
 
-Key Features
-EntityUtils: Simplifies asynchronous CRUD operations for any Room entity.
-RoomHelper: Manages Room database initialization and provides a singleton instance of the database.
-QueryBuilder: Allows developers to create dynamic SQL queries for more advanced use cases.
-Generic Implementation: The library works generically with any Room entity and DAO.
-Table of Contents
-Installation
-Usage
-Database Setup
-CRUD Operations
-Dynamic Queries
-Demo Application
-Contributing
-License
-Installation
-1. Add Room and Lifecycle Dependencies
-Ensure that the required Room and Lifecycle dependencies are added to your app/build.gradle file:
+<p align="center">
+  <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT"/>
+</p>
 
-gradle
-Copy code
+## <strong>Overview</strong>
+
+<p>
+The <strong>RoomSQL Query Simplification Library</strong> is designed to simplify working with Room in Android applications. It provides utility classes for performing common database operations such as CRUD (Create, Read, Update, Delete), dynamic query construction, and database initialization. This library reduces boilerplate code and streamlines the integration of Room in your Android projects.
+</p>
+
+<p>
+<strong>Key Features:</strong>
+<ul>
+  <li><strong>EntityUtils</strong>: Simplifies asynchronous CRUD operations for any Room entity.</li>
+  <li><strong>RoomHelper</strong>: Manages Room database initialization and provides a singleton instance of the database.</li>
+  <li><strong>QueryBuilder</strong>: Allows developers to create dynamic SQL queries for more advanced use cases.</li>
+  <li><strong>Generic Implementation</strong>: The library works generically with any Room entity and DAO.</li>
+</ul>
+</p>
+
+## <strong>Table of Contents</strong>
+
+<ul>
+  <li><a href="#installation">Installation</a></li>
+  <li><a href="#usage">Usage</a></li>
+  <ul>
+    <li><a href="#database-setup">Database Setup</a></li>
+    <li><a href="#crud-operations">CRUD Operations</a></li>
+    <li><a href="#dynamic-queries">Dynamic Queries</a></li>
+  </ul>
+  <li><a href="#demo-application">Demo Application</a></li>
+  <li><a href="#contributing">Contributing</a></li>
+  <li><a href="#license">License</a></li>
+</ul>
+
+## <a name="installation"></a><strong>Installation</strong>
+
+### 1. Add Room and Lifecycle Dependencies
+
+Ensure that the required Room and Lifecycle dependencies are added to your `app/build.gradle` file:
+
+```gradle
 dependencies {
     // Room components
     implementation 'androidx.room:room-runtime:2.5.2'
@@ -31,6 +51,7 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-livedata:2.5.1'
     implementation 'androidx.lifecycle:lifecycle-viewmodel:2.5.1'
 }
+
 2. Include the Library
 To use the library in your project, you can either include it as a local module or publish it to a repository (e.g., JitPack or Maven) and add it as a dependency.
 
